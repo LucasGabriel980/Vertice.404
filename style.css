@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #111 0%, #000 70%);
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* símbolo fantasma */
+.simbolo-central {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+
+  opacity: 0.035;
+  filter: blur(1.5px);
+
+  pointer-events: none;
+  z-index: 0;
+
+  animation: respirar 9s infinite ease-in-out;
+}
+
+@keyframes respirar {
+  0% { opacity: 0.02; }
+  50% { opacity: 0.06; }
+  100% { opacity: 0.02; }
+}
+
+/* conteúdo principal */
+.conteudo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.left p {
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+
+.linha1 {
+  font-size: 15px;
+}
+
+.linha2 {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.linha3 {
+  font-size: 11px;
+  opacity: 0.4;
+}
+
+/* assinatura */
+.assinatura {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.simbolo {
+  width: 50px;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+.nome {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #aaa;
+  opacity: 0.7;
+}
